@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.17.1",
+    "libraryName": "quick-poll-ace",
+    "libraryId": "c0bc963e-e1ba-4c8d-a36c-8e3f54cb9ad2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "quick-poll-ace",
+    "solutionShortDescription": "quick-poll-ace description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "PrimaryText",
+    "sdkVersions": {
+      "@microsoft/teams-js": "2.9.1",
+      "@microsoft/microsoft-graph-client": "3.0.2"
+    },
+    "nodeVersion": "16.15.0"
+  }
+}

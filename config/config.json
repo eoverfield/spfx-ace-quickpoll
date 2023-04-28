@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "quick-poll-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/quickPoll/QuickPollAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/quickPoll/QuickPollAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "QuickPollAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/quickPoll/loc/{locale}.js"
+  }
+}

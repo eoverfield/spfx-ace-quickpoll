@@ -1,0 +1,46 @@
+{
+    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Thank you for your response! See data below:",
+                            "wrap": true,
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "type": "Image",
+            "url": "${chartURL}",
+            "size": "Large"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Check ${selectedList} list for more details on responses!",
+                            "wrap": true,
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "body": [
+      {
+        "type": "Input.ChoiceSet",
+        "id": "response",
+        "style": "expanded",
+        "isMultiSelect": false,
+        "isRequired": true,
+        "label": "${question}",
+        "errorMessage": "Required input",
+        "value": "standard",
+        "choices": [
+          {
+            "$data": "${options}",
+            "title": "${title}",
+            "value": "${value}"
+          }
+        ]
+      },{
+        "type": "ColumnSet",
+        "columns": [
+            {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Click an option above and then hit Submit",
+                        "wrap": true
+                    }
+                ]
+            },
+            {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                    {
+                        "type": "ActionSet",
+                        "actions": [
+                            {
+                                "type": "Action.Submit",
+                                "title": "Submit Response",
+                                "id": "SubmitResponse",
+                                "data": {
+                                    "response": "{{response.value}}"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+  }
