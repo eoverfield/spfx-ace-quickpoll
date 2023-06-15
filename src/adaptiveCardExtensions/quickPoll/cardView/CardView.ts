@@ -11,6 +11,9 @@ export class CardView extends BasePrimaryTextCardView<IQuickPollAdaptiveCardExte
   public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
     if (this.properties.options && this.properties.question && this.properties.site && this.properties.list){
         const format = this.state.jsonFormat;
+        if (!format) {
+          return;
+        }
         let found = false;
         let user = this.state.user;
         var len = Object.keys(format["value"]).length;

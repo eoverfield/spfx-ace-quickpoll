@@ -37,7 +37,10 @@ export class QuestionView extends BaseAdaptiveCardView<
       let user = this.state.user;
       let siteurl = this.properties.site.split("/");
       var siteid: any;
-      if (siteurl.length < 5){
+      if (siteurl.length == 3) {
+        siteid = await client.api(`/sites/${siteurl[2]}:/`).select('id').get();
+      }
+      else if (siteurl.length > 3 && siteurl.length < 5){
         siteid = await client.api(`/sites/${siteurl[2]}:/${siteurl[3]}`).select('id').get();
       }else{
         siteid = await client.api(`/sites/${siteurl[2]}:/${siteurl[3]}/${siteurl[4]}`).select('id').get();
